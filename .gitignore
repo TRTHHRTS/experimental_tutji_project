@@ -1,0 +1,17 @@
+Homestead.json
+Homestead.yaml
+
+.idea/
+vendor/
+bootstrap/cache/
+public_html/
+node_modules/
+
+.env
+composer.phar
+composer.lock
+
+*.iml
+
+/storage/app/
+/storage/logs/

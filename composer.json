@@ -1,0 +1,68 @@
+{
+  "name": "tutji/tutji",
+  "description": "Tutji project",
+  "keywords": ["tutji", "silakov", "trthhrts"],
+  "license": "MIT",
+  "type": "project",
+  "require": {
+    "php": ">=7.2",
+    "laravel/framework": "5.6.*",
+    "laravelrus/localized-carbon": "1.*",
+    "barryvdh/laravel-ide-helper": "^2.4",
+    "doctrine/dbal": "^2.5",
+    "socialiteproviders/vkontakte": "^4.0",
+    "guzzlehttp/guzzle": "^6.2",
+    "intervention/image": "^2.3",
+    "menarasolutions/geographer": "~0.3",
+    "menarasolutions/geographer-ru": "^0.2.2",
+    "menarasolutions/geographer-laravel": "^0.2.0",
+    "fideloper/proxy": "~4.0",
+    "swiftmailer/swiftmailer": "^6.0",
+    "laravel/passport": "^7.0",
+    "laravel/socialite": "^3.2.0"
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery": "0.9.*",
+    "phpunit/phpunit": "~7.0",
+    "filp/whoops": "~2.0"
+  },
+  "autoload": {
+    "classmap": [
+      "database"
+    ],
+    "psr-4": {
+      "App\\": "app/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php",
+      "database/seeds/UsersSeeder.php",
+      "database/seeds/LessonsSeeder.php",
+      "database/seeds/ReviewsSeeder.php",
+      "database/seeds/MessagesSeeder.php"
+    ]
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
+    "post-install-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postInstall"
+    ],
+    "post-update-cmd": [
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate"
+    ],
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "php artisan package:discover"
+    ]
+  },
+  "config": {
+    "preferred-install": "dist"
+  }
+}
