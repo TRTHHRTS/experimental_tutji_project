@@ -29,7 +29,7 @@
     "moment": "^2.24.0",
     "moment-timezone": "0.5.25",
     "roboto-fontface": "^0.10.0",
-    "vue": "2.6.10",
+    "vue": "3.0.0",
     "vue-cookie": "^1.1.4",
     "vue-i18n": "^8.7.0",
     "vue-ls": "^3.2.1",
